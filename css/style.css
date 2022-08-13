@@ -348,7 +348,9 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132),rgb(233, 231, 234))
+    background-image: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132),rgb(233, 231, 234));
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 
