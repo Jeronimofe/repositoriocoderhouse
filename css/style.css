@@ -37,6 +37,7 @@ nav{
     width: 100vw;
     align-items: center;
     justify-content: space-evenly;
+    padding-left: 0px;
 }
 
 .navbar__list__item{
@@ -55,12 +56,8 @@ nav{
     width: 100%;
 }
 
-.navbar__list__item__link:hover{
-    color: rgb(217, 179, 132);
-}
-
 .navbar__list__item__link:focus{
-    color: rgb(166,110,78)
+    color: rgb(166,110,78);
 }
 
 .logoHeader{
@@ -103,7 +100,7 @@ nav{
     display: grid;
     grid-template-areas:
     ". . h1 h1 h1 . ."
-    ". . h2 h2 h2 h2 . "
+    ". h2 h2 h2 h2 h2 . "
     ;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr;
@@ -114,27 +111,33 @@ nav{
     align-self: flex-start;
     text-align: center;
     font-family: 'Sedgwick Ave', cursive;
-    font-size: 1.8rem;
-    color: rgb(0, 0, 0, 0.6);
+    color: rgba(194, 79, 44, 0.9);
+    padding-top: 5vh;
+}
+
+.seccionprimera__divh1 h1{
+    font-size: 2rem;
 }
 
 .seccionprimera__divh2{
     grid-area: h2;
+    text-align: center;
     font-family:'Poppins', sans-serif;
     display: grid;
     grid-template-rows: 10% 10%;
-}
-
-.seccionprimera__divh2__p2{
-    margin-top: 25px;
 }
 
 .seccionprimera__divh2 p{
     font-size: 0.7rem;
     font-weight: 500;
     color: rgb(0, 0, 0, 0.6);
+    margin: 0px;
+    align-self: end;
 }
 
+.seccionprimera__divh2__p2{
+    align-self: start !important;
+}
 
 /* aqui termina la seccion de los lapices */
 
@@ -288,52 +291,64 @@ nav{
 
 .titulo__customart{
     margin-top: 100px;
+    font-family: 'Sedgwick Ave', cursive;
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 2rem;
+    text-shadow: 4px 4px 5px;
 }
 
 .main__customart{
+    background-color:rgb(233, 231, 234);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.sectioncarrousel{
-    height: 80vh;
-    width: 100vw;
-    margin-bottom: 5vh;
+.carouselclasepropia{
+    display: block;
+    padding: 20px;
+    margin: 30px;
+    background-image: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132),rgb(233, 231, 234));
 }
 
-
-.sectioncarrousel__imagen{
-    height: 60%;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-top: 20px;
-    margin-bottom: 5vh;
-}
-
-.sectioncarrousel__imagen img{
-    height: 100%;
+.carousel{
     width: 100%;
+    height: 100%;
 }
 
-.sectioncarrousel__texto{
-    margin-left: 5vw;
-    margin-right: 5vw;
-    font-size: 0.8rem;
-    text-align: center;
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-carousel{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption{
+    font-weight: 650;
+    background-color: rgba(104, 73, 27, 0.6);
+    border-radius: 60px;
+    color: rgb(217, 179, 132);
 }
 
 .customart__textoinferior{
     height: 50vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    width: 100%;
     padding: 5px;
     font-size: 0.8rem;
-    border-top: 3px solid rgb(217, 179, 132);
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132),rgb(233, 231, 234))
 }
 
 
@@ -531,13 +546,15 @@ footer{
         width: auto;
     }
 
-    .logoHeader{
-        display: flex;
-    }
-
     .logoHeader img{
         display: inline-block;
     }
+
+   /* INDEX */
+
+   .seccionprimera__divh1 h1{
+    font-size: 2.5rem;
+}
 
     /* INICIO SECCION DE CONTACTO */
 
@@ -559,13 +576,13 @@ footer{
 
     /* CUSTOM ART */
 
-    .sectioncarrousel__texto{
-        font-size: 0.9rem;
+    .carouselclasepropia{
+        display: block;
+        padding: 30px;
     }
 
     .customart__textoinferior{
         height: 50vh;
-        font-size: 0.9rem;
     }
 
     /* NUESTRO EQUIPO */
@@ -635,17 +652,6 @@ footer{
         padding-top: 20px;
     }
 
-    /* CUSTOM ART */
-
-    .sectioncarrousel__texto{
-        font-size: 0.9rem;
-    }
-
-    .customart__textoinferior{
-        height: 55vh;
-        font-size: 1rem;
-    }
-
 }
 
 @media (min-width:768px) {
@@ -660,6 +666,10 @@ footer{
 
     /* SECCION PRIMERA */
 
+    .seccionprimera__divh1 h1{
+        font-size: 3.5rem;
+    }
+
     .seccionprimera{
         padding-top: 100px;
     }
@@ -667,7 +677,7 @@ footer{
     .seccionprimera{
         grid-template-areas:
         ". . h1 h1 h1 . ."
-        ". . h2 h2 h2 h2 h2 "
+        ". . h2 h2 h2 . . "
         ;
     }
 
@@ -687,7 +697,6 @@ footer{
 
     .seccionsegunda__contenedor__carrousel{             
         height: 80%;
-
     }
     
     .seccionsegunda__contenedor__textoImagen{
@@ -705,18 +714,9 @@ footer{
 
     /* CUSTOM ART */
 
-    .sectioncarrousel{
-        padding-top: 50px;
-        height: 70vh;
-    }
-
-    .sectioncarrousel__texto{
-        font-size: 1rem;
-    }
-
     .customart__textoinferior{
         height: 30vh;
-        font-size: 1.2rem;
+        font-size: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -748,6 +748,7 @@ footer{
     }
 
     .logoHeader{
+        display: flex;
         height: 80px;
         margin: 0px;
         justify-self: end;
@@ -786,9 +787,19 @@ footer{
         font-size: 1rem;
     }
 
+    .navbar__list__item__link:hover{
+        transition-duration: 0.3s;
+        transition-property: color;
+        color: rgb(217, 179, 132);
+    }
+
     /* INDEX */
 
     /* PRIMERA SECCION */
+
+    .seccionprimera__divh1 h1{
+        font-size: 4.5rem;
+    }
 
     .seccionprimera{
         background-size: 100% 100%;
@@ -894,6 +905,16 @@ footer{
         padding: 5px;
         font-size: 1rem;
         grid-area: form;
+    }
+
+    /* CUSTOM ART */
+
+    .titulo__customart{
+        font-size: 4rem;
+    }
+
+    .carouselclasepropia{
+        height: 100vh;
     }
     
     /* NUESTRO EQUIPO */
