@@ -292,13 +292,18 @@ nav{
 .titulo__customart{
     margin-top: 100px;
     font-family: 'Sedgwick Ave', cursive;
-    color: rgb(0, 0, 0, 0.6);
+    color: rgba(194, 79, 44, 0.9);
+    padding: 7px;
+    background-image: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132, 0.7),rgb(233, 231, 234));
+    border-radius: 20px;
     font-size: 2rem;
-    text-shadow: 4px 4px 5px;
 }
 
 .main__customart{
-    background-color:rgb(233, 231, 234);
+    background-image: url(../img/Fondocustomart.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -914,6 +919,12 @@ footer{
     .titulo__customart{
         font-size: 4rem;
     }
+
+    .imagen-carousel{
+        width: 80%;
+        margin-left: 10%;
+    }
+    
 
     .carouselclasepropia{
         height: 100vh;
