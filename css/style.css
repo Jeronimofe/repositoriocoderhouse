@@ -408,34 +408,38 @@ nav{
 
 .sectiontitulogaleria{
     padding-top: 100px;
+    height: 100vh;
     background-image: url(../img/Fondo_galeria.jpg);
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
-    display: grid;
+/*     display: grid;
     grid-template-areas:
     ". titulo ."
     "logo . ."
     ;
     grid-template-rows: 62vh 100px;
-    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-columns: 33vw 33vw 33vw; */
 }
 
 .sectiontitulogaleria__img{
-    grid-area: logo;
+    /* grid-area: logo; */
     opacity: 0.4;
-    height: 100px;
-    width:100px
+/*     height: 100px;
+    width:100px */
+}
+
+.row{
+    margin: 0px;
 }
 
 .sectiontitulogaleria__img img{
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 
 .sectiontitulogaleria__h1{
-    margin-left: 20px;
-    grid-area: titulo;
+    /* grid-area: titulo; */
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     color: rgb(0, 0, 0);
@@ -725,7 +729,7 @@ footer{
     /* SECCION GALERIA */
 
     .sectiontitulogaleria__h1{
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .sectiontitulogaleria{
@@ -734,8 +738,7 @@ footer{
     }
 
     .sectiontitulogaleria__img{
-        height: 300px;
-        width: 300px
+        height: 90%;
     }
 }
 
@@ -948,11 +951,6 @@ footer{
     .sectiontitulogaleria{
         grid-template-rows: 20vh 70vh;
         grid-template-columns: 40vw 20vw 40vw;
-    }
-    
-    .sectiontitulogaleria__img{
-        height: 100%;
-        width: 100%;
     }
 
     .sectiongaleria__img img{
