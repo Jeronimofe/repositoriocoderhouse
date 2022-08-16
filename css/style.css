@@ -91,23 +91,20 @@ nav{
 
 /* Propiedades del Main */
 
+.container-fluid{
+    padding: 0px;
+}
+
 .seccionprimera{
     background-image: url(../img/Lapiz.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     padding-top: 120px;
-    display: grid;
-    grid-template-areas:
-    ". . h1 h1 h1 . ."
-    ". h2 h2 h2 h2 h2 . "
-    ;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    align-content: flex-start;
 }
 
 .seccionprimera__divh1{
-    grid-area: h1;
     align-self: flex-start;
     text-align: center;
     font-family: 'Sedgwick Ave', cursive;
@@ -120,11 +117,8 @@ nav{
 }
 
 .seccionprimera__divh2{
-    grid-area: h2;
     text-align: center;
     font-family:'Poppins', sans-serif;
-    display: grid;
-    grid-template-rows: 10% 10%;
 }
 
 .seccionprimera__divh2 p{
