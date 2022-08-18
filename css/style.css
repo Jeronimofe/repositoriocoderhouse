@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+.row{
+    margin: 0px;
+}
+
 /* Propiedades del header */
 
 header{
@@ -54,10 +58,6 @@ nav{
     font-size: 0.7rem;
     height: 100%;
     width: 100%;
-}
-
-.navbar__list__item__link:focus{
-    color: rgb(166,110,78);
 }
 
 .logoHeader{
@@ -207,10 +207,6 @@ nav{
     padding-bottom: 100px;
     padding-left: 10px;
     padding-right: 10px;
-    /* height: 100vh; */
-    /* display: flex; */
-/*     justify-content: center;
-    align-items: center; */
 }
 
 .seccionprimera--pedidos__contenedor{
@@ -219,25 +215,14 @@ nav{
     border: 2px solid black;
     height: 100%;
     width: 100%;
-/*     display: grid;
-    grid-template-areas: 
-    ". titulo titulo ."
-    "contenedor contenedor contenedor contenedor"
-    ;
-    grid-template-rows: 15% 85%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-evenly;
-    align-items: center; */
 }
 
 .seccionprimera--pedidos__contenedor__titulo{
-    /* grid-area: titulo; */
     font-size: 15px;
     text-align: center;
 }
 
 .seccionprimera--pedidos__contenedor__form{
-    /* display: grid; */
     grid-area: contenedor;
     justify-self: center;
     flex-direction: column;
@@ -284,9 +269,29 @@ nav{
     align-items: center;
 }
 
+label+input:focus{
+    background-color: rgb(230, 175, 252);
+}
+
+label+textarea:focus{
+    background-color: rgb(230, 175, 252);
+}
+
+.submit_boton{
+    margin: 15px;
+    color: black;
+    background-color: rgb(230, 175, 252);
+    font-family:'Sedgwick Ave', cursive;
+}
+
+.submit_boton:hover{
+    background-color: rgb(209, 122, 212);
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
 
 
-                                            /* FIN DE INDEX */
+                                            /* FIN DE PEDIDOS */
 
                                             /* INICIO CUSTOM ART */
 
@@ -367,37 +372,32 @@ nav{
                                             /* INICIO NUESTRO EQUIPO */
 
 .mainequipo{
-    margin-top: 90px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 .tituloequipo{
     font-size: 1.5rem;
-    padding: 5px;
+    padding: 7px;
     margin-bottom: 20px;
     text-align: center;
+    font-family: 'Sedgwick Ave', cursive;
+    color: rgba(194, 79, 44, 0.9);
+    border-radius: 20px;
+    font-weight: 700;
+    background-image: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132, 0.7),rgb(233, 231, 234));
 }
 
 .sectionequipo{
-    display: flex;
-    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .sectionequipo__divtexto{
-    display: grid;
-    grid-template-rows: 15% 85%;
-    justify-items: center;
-    align-items: center;
-    width: 100vw;
-    height: 450px;
-    font-size: 0.9rem;
-}
-
-.sectionequipo__imagen{
-    height: 80vh;
-    width: 100vw;
+    text-align: center;
 }
 
 .sectionequipo__imagen img{
@@ -578,9 +578,6 @@ footer{
     .leyend__formulario{
         margin: 0px;
         height: 100px;
-/*         display: flex;
-        flex-direction: column;
-        justify-content: space-around; */
     }
 
     .formulario{
@@ -590,12 +587,6 @@ footer{
         font-family:'Sedgwick Ave', cursive;
     }
 
-    .submit_boton{
-        margin: 15px;
-        background-color: pink;
-        color: black;
-        font-family:'Sedgwick Ave', cursive;
-    }
 
     /* CUSTOM ART */
 
@@ -610,12 +601,7 @@ footer{
 
     /* NUESTRO EQUIPO */
 
-    .sectionequipo__divtexto{
-        grid-template-rows: 5% 95%;
-    }
-
     .sectionequipo__divtexto__titulo{
-        padding-top: 60px;
         font-size: 1rem;
     }
 
@@ -692,13 +678,6 @@ footer{
 
     .seccionprimera{
         padding-top: 100px;
-    }
-
-    .seccionprimera{
-        grid-template-areas:
-        ". . h1 h1 h1 . ."
-        ". . h2 h2 h2 . . "
-        ;
     }
 
     .seccionprimera__divh1{
@@ -946,21 +925,8 @@ footer{
     .sectionequipo{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
     }
-    
-    .sectionequipo__imagen{
-        height: 80vh;
-        width: 40vw;
-    }
-
-    .sectionequipo__imagen img{
-        height: 90%;
-    }
-
-    .sectionequipo__divtexto{
-        width: 50vw;
-        height: 80vh;
-    }    
 
     /* SECCION GALERIA */
 
