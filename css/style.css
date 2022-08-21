@@ -139,7 +139,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    height: fit-content;
     background-image: url(../img/fondo_index_segundaseccion.jpg);
     background-size: cover;
     border-top: 3px solid black;
@@ -150,6 +150,7 @@ nav{
     border: 3px solid black;
     width: 95%;
     height: 80%;
+    margin: 15px;
 }
 
 .seccionsegunda__contenedor__carrousel{
@@ -175,7 +176,7 @@ nav{
 
 .seccionsegunda__contenedor__textoImagen p{
     display: inline;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .seccionsegunda__contenedor__textoinferior{
@@ -183,7 +184,7 @@ nav{
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 
@@ -447,6 +448,7 @@ label+textarea:focus{
     font-size: 30px;
     font-weight: 700;
     justify-self: center;
+    align-self: center;
     padding: 10px;
     text-align:center;
 }
@@ -563,6 +565,9 @@ footer{
 
    .seccionprimera__divh1 h1{
     font-size: 2.5rem;
+}
+.seccionsegunda{
+    height: fit-content;
 }
 
     /* INICIO SECCION DE CONTACTO */
@@ -694,13 +699,16 @@ footer{
 
     /* SECCION SEGUNDA */
 
-    .seccionsegunda__contenedor__carrousel{             
-        height: 80%;
+    .seccionsegunda__contenedor__carrousel{
+        width: 40%;                 
+        height: 85%;
+        padding: 1%;
+        padding-top: 1%;
     }
     
     .seccionsegunda__contenedor__textoImagen{
         display: inline-block;
-        width: 100%;                           /* texto continuo a la imagen */
+        width: 50%;                         /* texto continuo a la imagen */
     }
     
     .seccionsegunda__contenedor__textoImagen p{
@@ -729,11 +737,6 @@ footer{
         font-size: 35px;
     }
 
-    .sectiontitulogaleria{
-        grid-template-rows: 50vh 300px;
-        grid-template-columns: 33vw 33vw 33vw;
-    }
-
     .sectiontitulogaleria__img{
         height: 90%;
     }
@@ -742,10 +745,20 @@ footer{
         justify-content: center;
     }
 
+    .sectiongaleria__imagenes__item{
+        width: 40%;
+        height: 200px;
+        margin: 5px;   /*soy consciente de los diferentes tamaños de las imagenes entre si, esas son las imagenes que tenia en el momento y no seran las definitivas*/
+    }
+
     .sectiongaleria__imagenes__item:hover{
-        transform: scale(1.5);
+        transform: scale(1.4);
         transition-duration: 1s;
         transition-property: transform;
+    }
+
+    .sectiongaleria{
+        height: 95vh;
     }
 }
 
@@ -935,8 +948,32 @@ footer{
         grid-template-columns: 40vw 20vw 40vw;
     }
 
-    .sectiongaleria{
-        height: 85vh;
+    .sectiongaleria__imagenes__item{
+            height: 250px;
+            width: 450px;
+            margin: 5px;
     }
+
+    .sectiongaleria__imagenes__item:hover{
+        transform: scale(1.2);
+    }
+
+    .sectiongaleria{
+        height: 100vh;
+    }
+
+}
+
+@media (min-width:1300px){
+
+    .sectiongaleria__imagenes__item{
+        height: 350px;
+        width: 550px;
+        margin: 10px;
+}
+
+.sectiongaleria{
+    height: 150vh;
+}
 
 }
