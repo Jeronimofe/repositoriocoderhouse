@@ -1,3 +1,13 @@
-
+@import url("./abstracts/_variables.scss");
+@import url("./base/_resets.scss");
+@import url("./base/_tipografia.scss");
+@import url("./partes/_footer.scss");
+@import url("./partes/_header.scss");
+@import url("./componentes/_carousel.scss");
+@import url("./paginas/_contacto.scss");
+@import url("./paginas/_custom_art.scss");
+@import url("./paginas/_sobre_nosotros.scss");
+@import url("./paginas/_galeria.scss");
+@import url("./paginas/_index.scss");
 
 /*# sourceMappingURL=styles.css.map */
