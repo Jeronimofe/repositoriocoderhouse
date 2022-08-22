@@ -1,13 +1,364 @@
-@import url("./abstracts/_variables.scss");
-@import url("./base/_resets.scss");
-@import url("./base/_tipografia.scss");
-@import url("./partes/_footer.scss");
-@import url("./partes/_header.scss");
-@import url("./componentes/_carousel.scss");
-@import url("./paginas/_contacto.scss");
-@import url("./paginas/_custom_art.scss");
-@import url("./paginas/_sobre_nosotros.scss");
-@import url("./paginas/_galeria.scss");
-@import url("./paginas/_index.scss");
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.row {
+  margin: 0px;
+}
+
+footer {
+  border-top: 3px solid rgb(6, 22, 3);
+  background-color: rgb(11, 41, 11);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+footer .redesociales {
+  align-self: flex-start;
+  padding: 10px;
+  margin: 5px;
+}
+footer .redesociales .redesociales__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  list-style: none;
+}
+footer .derechos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: 0.7rem;
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+}
+footer .derechos .derechos__año {
+  margin-left: 120px;
+}
+footer .derechos .derechos__patente {
+  margin-top: 10px;
+}
+
+@media (min-width: 480px) {
+  footer .derechos {
+    display: grid;
+    grid-template-areas: ". patente patente ." "nombre . . año";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    padding-bottom: 0px;
+  }
+  footer .derechos .derechos__año {
+    grid-area: año;
+    margin: 0px;
+    text-align: center;
+  }
+  footer .derechos .derechos__patente {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 15px;
+    grid-area: patente;
+    text-align: center;
+    background-color: beige;
+    font-size: larger;
+  }
+  footer .derechos .derechos__nombre {
+    grid-area: nombre;
+    text-align: center;
+  }
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 0px;
+  background: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.61), rgb(233, 231, 234));
+  height: 70px;
+  width: 100vw;
+  z-index: 1000;
+}
+header .logoHeader {
+  width: 90px;
+  height: 70px;
+  margin-right: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: none;
+}
+header .logoHeader img {
+  display: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 80%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  object-fit: contain;
+  opacity: 0.6;
+}
+header nav {
+  height: 90px;
+  width: 100vw;
+}
+header nav .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+header nav .navbar__list {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 0px;
+}
+header nav .navbar__list__item {
+  text-align: center;
+  padding: 1px;
+  width: 20%;
+}
+header nav .navbar__list__item__link {
+  text-decoration: none;
+  color: darkslategray;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 0.7rem;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  header {
+    height: 80px;
+  }
+  header nav {
+    height: 80px;
+  }
+  header nav .navbar {
+    height: 80px;
+  }
+  header nav .navbar__list__item {
+    width: auto;
+  }
+  header .logoHeader img {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .navbar__list__item__link {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  header .logoHeader {
+    display: flex;
+    height: 80px;
+    margin: 0px;
+    justify-self: end;
+  }
+  header nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  header nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+  header nav .navbar__list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header nav .navbar__list__item {
+    text-align: center;
+    padding: 3px;
+  }
+  header nav .navbar__list__item__link {
+    font-size: 1rem;
+  }
+  header nav .navbar__list__item__link:hover {
+    transition-duration: 0.3s;
+    transition-property: color;
+    color: rgb(217, 179, 132);
+  }
+}
+.seccionprimera--pedidos {
+  background-image: url(../img/Fondo_contacto.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 150vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.seccionprimera--pedidos__contenedor {
+  background-color: rgba(250, 235, 215, 0.6);
+  background-position: bottom;
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+}
+.seccionprimera--pedidos__contenedor__titulo {
+  font-size: 15px;
+  text-align: center;
+}
+.seccionprimera--pedidos__contenedor__form {
+  grid-area: contenedor;
+  justify-self: center;
+  flex-direction: column;
+  grid-template-rows: 1fr 5fr;
+  width: 100%;
+  height: 100%;
+}
+.seccionprimera--pedidos__contenedor__form__formulario {
+  justify-content: center;
+  align-items: baseline;
+  height: 60%;
+  font-size: 0.8rem;
+  border-top: 1px solid black;
+}
+.seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
+  padding: 5px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario legend {
+  margin-bottom: 5px;
+  font-weight: 900;
+  font-size: 12px;
+}
+.seccionprimera--pedidos__contenedor__form__formulario .formulario {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.seccionprimera--pedidos__contenedor__form__formulario .formulario label + input:focus {
+  background-color: rgb(230, 175, 252);
+}
+.seccionprimera--pedidos__contenedor__form__formulario .formulario label + textarea:focus {
+  background-color: rgb(230, 175, 252);
+}
+.seccionprimera--pedidos__contenedor__form__formulario .formulario .submit_boton {
+  margin: 15px;
+  color: black;
+  background-color: rgb(230, 175, 252);
+  font-family: "Sedgwick Ave", cursive;
+}
+.seccionprimera--pedidos__contenedor__form__formulario .formulario .submit_boton:hover {
+  background-color: rgb(209, 122, 212);
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+.seccionprimera--pedidos__contenedor__form__parrafo {
+  margin-top: 1%;
+  height: 40%;
+  padding: 5px;
+  align-self: center;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 480px) {
+  .seccionprimera--pedidos__contenedor__form__parrafo {
+    font-size: 1rem;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario {
+    align-content: center;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
+    margin: 0px;
+    height: 100px;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario .formulario {
+    height: 60%;
+    justify-content: stretch;
+    align-items: stretch;
+    font-family: "Sedgwick Ave", cursive;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .seccionprimera--pedidos {
+    padding-top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos {
+    height: 100%;
+  }
+  .seccionprimera--pedidos__contenedor {
+    height: 80%;
+  }
+  .seccionprimera--pedidos__contenedor__titulo {
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
+  }
+  .seccionprimera--pedidos__contenedor__form {
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    height: 100%;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario {
+    border-left: 2px solid black;
+    border-top: none;
+    padding-left: 10%;
+    width: 70%;
+    height: 100%;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
+    grid-area: legend;
+    padding: 5px;
+    height: 60px;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario legend {
+    font-size: 1rem;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario .leyend__formulario p {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1rem;
+  }
+  .seccionprimera--pedidos__contenedor__form__formulario .formulario {
+    padding: 5px;
+    font-size: 1rem;
+    grid-area: form;
+  }
+  .seccionprimera--pedidos__contenedor__form__parrafo {
+    width: 30%;
+    height: 50%;
+    padding: 5px;
+    align-self: center;
+    font-size: 1rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

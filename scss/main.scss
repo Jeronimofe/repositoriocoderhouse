@@ -1,22 +1,22 @@
-@import url('./abstracts/_variables.scss');
+@import "./abstracts/_variables";
 
 
-@import url('./base/_resets.scss');
-@import url('./base/_tipografia.scss');
+@import "./base/_resets";
+@import "./base/_tipografia";
 
 
 
-@import url('./partes/_footer.scss');
-@import url('./partes/_header.scss');
+@import "./partes/_footer";
+@import "./partes/header";
 
 
-@import url('./componentes/_carousel.scss');
+@import "./componentes/_carousel";
 
 
-@import url('./paginas/_contacto.scss');
-@import url('./paginas/_custom_art.scss');
-@import url('./paginas/_sobre_nosotros.scss');
-@import url('./paginas/_galeria.scss');
-@import url('./paginas/_index.scss');
+@import "./paginas/_contacto";
+@import "./paginas/_custom_art";
+@import "./paginas/_sobre_nosotros";
+@import "./paginas/_galeria";
+@import "./paginas/_index";
 
 

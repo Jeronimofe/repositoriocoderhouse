@@ -1,0 +1,74 @@
+footer{
+    border-top: 3px solid rgb(6, 22, 3);
+    background-color: rgb(11, 41, 11);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    .redesociales{
+        align-self: flex-start;
+        padding: 10px;
+        margin: 5px;
+        .redesociales__list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            list-style: none;
+        }
+    }
+    .derechos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+        font-size: 0.7rem;
+        width: 100%;
+        padding: 10px;
+        margin: 5px;
+        .derechos__año{
+            margin-left: 120px;
+        }
+        .derechos__patente{
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    footer{
+        .derechos{
+            display: grid;
+            grid-template-areas: 
+            ". patente patente ."
+            "nombre . . año"
+            ;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 1fr;
+            padding-bottom: 0px;
+            .derechos__año{
+                grid-area: año;
+                margin: 0px;
+                text-align: center;
+            }
+            .derechos__patente{
+                border-top: 1px solid black;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                border-radius: 15px;
+                grid-area: patente;
+                text-align: center;
+                background-color: beige;
+                font-size: larger;
+            }
+            .derechos__nombre{
+                grid-area: nombre;
+                text-align: center;
+            }
+        }
+    }
+
+}
+

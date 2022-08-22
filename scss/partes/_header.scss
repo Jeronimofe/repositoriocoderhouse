@@ -1,0 +1,150 @@
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0px;
+    background: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132, 0.61),rgb(233, 231, 234));
+    height: 70px;
+    width: 100vw;
+    z-index: 1000;
+    .logoHeader{
+        width: 90px;
+        height: 70px;
+        margin-right: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: none;
+        img{
+            display: none;
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 90%;
+            height: 80%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            object-fit: contain;
+            opacity: 0.6;
+        }
+    }
+
+    nav{
+        height: 90px;
+        width: 100vw;
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            &__list{
+                display: flex;
+                width: 100vw;
+                align-items: center;
+                justify-content: space-evenly;
+                padding-left: 0px;
+                &__item{
+                    text-align: center;
+                    padding: 1px;
+                    width: 20%;
+                    &__link{
+                        text-decoration: none;
+                        color: darkslategray;
+                        font-family: 'Edu NSW ACT Foundation', cursive;
+                        font-size: 0.7rem;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: 480px) {
+
+    header{
+        height: 80px;
+        nav{
+            height: 80px;
+            .navbar{
+                height: 80px;
+                &__list__item{
+                    width: auto;
+                }
+            }
+        }
+        .logoHeader img{
+            display: inline-block;
+        }
+    }
+}
+
+@media (min-width:768px) {
+
+    .navbar__list__item__link{
+        font-size: 1rem !important;
+    }
+}
+
+@media (min-width:1024px) {
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        .logoHeader{
+            display: flex;
+            height: 80px;
+            margin: 0px;
+            justify-self: end;
+        }
+        nav{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .navbar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 50%;
+                &__list{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-around;
+                    &__item{
+                        text-align: center;
+                        padding: 3px;
+                        &__link{
+                            font-size: 1rem;
+                            &:hover{
+                                transition-duration: 0.3s;
+                                transition-property: color;
+                                color: rgb(217, 179, 132);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+}
