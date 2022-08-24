@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*general*/
+/*colores*/
+/*contacto*/
+/*colores*/
+/*galeria*/
+/*colores*/
 * {
   margin: 0px;
   padding-left: 0px;
@@ -24,7 +30,7 @@ footer .redesociales {
   padding: 10px;
   margin: 5px;
 }
-footer .redesociales .redesociales__list {
+footer .redesociales__list {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -41,13 +47,6 @@ footer .derechos {
   padding: 10px;
   margin: 5px;
 }
-footer .derechos .derechos__año {
-  margin-left: 120px;
-}
-footer .derechos .derechos__patente {
-  margin-top: 10px;
-}
-
 @media (min-width: 480px) {
   footer .derechos {
     display: grid;
@@ -56,12 +55,22 @@ footer .derechos .derechos__patente {
     grid-template-rows: 0.5fr 1fr;
     padding-bottom: 0px;
   }
-  footer .derechos .derechos__año {
+}
+footer .derechos__año {
+  margin-left: 120px;
+}
+@media (min-width: 480px) {
+  footer .derechos__año {
     grid-area: año;
     margin: 0px;
     text-align: center;
   }
-  footer .derechos .derechos__patente {
+}
+footer .derechos__patente {
+  margin-top: 10px;
+}
+@media (min-width: 480px) {
+  footer .derechos__patente {
     border-top: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -72,21 +81,35 @@ footer .derechos .derechos__patente {
     background-color: beige;
     font-size: larger;
   }
-  footer .derechos .derechos__nombre {
+}
+@media (min-width: 480px) {
+  footer .derechos__nombre {
     grid-area: nombre;
     text-align: center;
   }
 }
+
 header {
   position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   top: 0px;
-  background: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.61), rgb(233, 231, 234));
+  background: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.7), rgb(233, 231, 234));
   height: 70px;
   width: 100vw;
   z-index: 1000;
+}
+@media (min-width: 480px) {
+  header {
+    height: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
 }
 header .logoHeader {
   width: 90px;
@@ -96,6 +119,14 @@ header .logoHeader {
   margin-top: 10px;
   margin-bottom: 10px;
   display: none;
+}
+@media (min-width: 1024px) {
+  header .logoHeader {
+    display: flex;
+    height: 80px;
+    margin: 0px;
+    justify-self: end;
+  }
 }
 header .logoHeader img {
   display: none;
@@ -108,9 +139,27 @@ header .logoHeader img {
   object-fit: contain;
   opacity: 0.6;
 }
+@media (min-width: 480px) {
+  header .logoHeader img {
+    display: inline-block;
+  }
+}
 header nav {
   height: 90px;
   width: 100vw;
+}
+@media (min-width: 480px) {
+  header nav {
+    height: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  header nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 header nav .navbar {
   display: flex;
@@ -119,6 +168,20 @@ header nav .navbar {
   height: 100%;
   width: 100%;
 }
+@media (min-width: 480px) {
+  header nav .navbar {
+    height: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  header nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+}
 header nav .navbar__list {
   display: flex;
   width: 100vw;
@@ -126,10 +189,29 @@ header nav .navbar__list {
   justify-content: space-evenly;
   padding-left: 0px;
 }
+@media (min-width: 1024px) {
+  header nav .navbar__list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
 header nav .navbar__list__item {
   text-align: center;
   padding: 1px;
   width: 20%;
+}
+@media (min-width: 480px) {
+  header nav .navbar__list__item {
+    width: auto;
+  }
+}
+@media (min-width: 1024px) {
+  header nav .navbar__list__item {
+    text-align: center;
+    padding: 3px;
+  }
 }
 header nav .navbar__list__item__link {
   text-decoration: none;
@@ -139,72 +221,24 @@ header nav .navbar__list__item__link {
   height: 100%;
   width: 100%;
 }
-
-@media (min-width: 480px) {
-  header {
-    height: 80px;
-  }
-  header nav {
-    height: 80px;
-  }
-  header nav .navbar {
-    height: 80px;
-  }
-  header nav .navbar__list__item {
-    width: auto;
-  }
-  header .logoHeader img {
-    display: inline-block;
-  }
-}
 @media (min-width: 768px) {
-  .navbar__list__item__link {
-    font-size: 1rem !important;
-  }
-}
-@media (min-width: 1024px) {
-  header {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-  }
-  header .logoHeader {
-    display: flex;
-    height: 80px;
-    margin: 0px;
-    justify-self: end;
-  }
-  header nav {
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  header nav .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-  }
-  header nav .navbar__list {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-  }
-  header nav .navbar__list__item {
-    text-align: center;
-    padding: 3px;
-  }
   header nav .navbar__list__item__link {
     font-size: 1rem;
   }
+}
+@media (min-width: 1024px) {
+  header nav .navbar__list__item__link {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
   header nav .navbar__list__item__link:hover {
     transition-duration: 0.3s;
     transition-property: color;
     color: rgb(217, 179, 132);
   }
 }
+
 .seccionprimera--pedidos {
   background-image: url(../img/Fondo_contacto.jpg);
   background-position: bottom;
@@ -216,6 +250,16 @@ header nav .navbar__list__item__link {
   padding-left: 10px;
   padding-right: 10px;
 }
+@media (min-width: 600px) and (max-width: 767px) {
+  .seccionprimera--pedidos {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos {
+    height: 100%;
+  }
+}
 .seccionprimera--pedidos__contenedor {
   background-color: rgba(250, 235, 215, 0.6);
   background-position: bottom;
@@ -223,9 +267,32 @@ header nav .navbar__list__item__link {
   height: 100%;
   width: 100%;
 }
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor {
+    height: 80%;
+  }
+}
+@media (min-width: 480px) {
+  .seccionprimera--pedidos__contenedor {
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .seccionprimera--pedidos__contenedor {
+    height: 100%;
+  }
+}
 .seccionprimera--pedidos__contenedor__titulo {
   font-size: 15px;
   text-align: center;
+  color: rgba(194, 79, 44, 0.9);
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__titulo {
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
+  }
 }
 .seccionprimera--pedidos__contenedor__form {
   grid-area: contenedor;
@@ -235,6 +302,14 @@ header nav .navbar__list__item__link {
   width: 100%;
   height: 100%;
 }
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__form {
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    height: 100%;
+  }
+}
 .seccionprimera--pedidos__contenedor__form__formulario {
   justify-content: center;
   align-items: baseline;
@@ -242,16 +317,60 @@ header nav .navbar__list__item__link {
   font-size: 0.8rem;
   border-top: 1px solid black;
 }
+@media (min-width: 480px) {
+  .seccionprimera--pedidos__contenedor__form__formulario {
+    align-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .seccionprimera--pedidos__contenedor__form__formulario {
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__form__formulario {
+    border-left: 2px solid black;
+    border-top: none;
+    padding-left: 10%;
+    width: 70%;
+    height: 100%;
+  }
+}
 .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
   padding: 5px;
   height: 40px;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 480px) {
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
+    margin: 0px;
+    height: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
+    grid-area: legend;
+    padding: 5px;
+    height: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario p {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1rem;
+  }
+}
 .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario legend {
   margin-bottom: 5px;
   font-weight: 900;
   font-size: 12px;
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario legend {
+    font-size: 1rem;
+  }
 }
 .seccionprimera--pedidos__contenedor__form__formulario .formulario {
   padding: 5px;
@@ -260,6 +379,21 @@ header nav .navbar__list__item__link {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 480px) {
+  .seccionprimera--pedidos__contenedor__form__formulario .formulario {
+    height: 60%;
+    justify-content: stretch;
+    align-items: stretch;
+    font-family: "Sedgwick Ave", cursive;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionprimera--pedidos__contenedor__form__formulario .formulario {
+    padding: 5px;
+    font-size: 1rem;
+    grid-area: form;
+  }
 }
 .seccionprimera--pedidos__contenedor__form__formulario .formulario label + input:focus {
   background-color: rgb(230, 175, 252);
@@ -285,73 +419,17 @@ header nav .navbar__list__item__link {
   align-self: center;
   font-size: 0.8rem;
 }
-
 @media (min-width: 480px) {
   .seccionprimera--pedidos__contenedor__form__parrafo {
     font-size: 1rem;
   }
-  .seccionprimera--pedidos__contenedor__form__formulario {
-    align-content: center;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
-    margin: 0px;
-    height: 100px;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario .formulario {
-    height: 60%;
-    justify-content: stretch;
-    align-items: stretch;
-    font-family: "Sedgwick Ave", cursive;
-  }
 }
-@media (min-width: 600px) and (max-width: 767px) {
-  .seccionprimera--pedidos {
-    padding-top: 20px;
+@media (min-width: 768px) {
+  .seccionprimera--pedidos__contenedor__form__parrafo {
+    height: 25%;
   }
 }
 @media (min-width: 1024px) {
-  .seccionprimera--pedidos {
-    height: 100%;
-  }
-  .seccionprimera--pedidos__contenedor {
-    height: 80%;
-  }
-  .seccionprimera--pedidos__contenedor__titulo {
-    justify-self: center;
-    align-self: center;
-    font-size: 1rem;
-  }
-  .seccionprimera--pedidos__contenedor__form {
-    display: flex;
-    flex-direction: row;
-    width: 99%;
-    height: 100%;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario {
-    border-left: 2px solid black;
-    border-top: none;
-    padding-left: 10%;
-    width: 70%;
-    height: 100%;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario {
-    grid-area: legend;
-    padding: 5px;
-    height: 60px;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario legend {
-    font-size: 1rem;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario .leyend__formulario .leyend__formulario p {
-    padding-left: 0px;
-    padding-right: 0px;
-    font-size: 1rem;
-  }
-  .seccionprimera--pedidos__contenedor__form__formulario .formulario {
-    padding: 5px;
-    font-size: 1rem;
-    grid-area: form;
-  }
   .seccionprimera--pedidos__contenedor__form__parrafo {
     width: 30%;
     height: 50%;
@@ -359,6 +437,145 @@ header nav .navbar__list__item__link {
     align-self: center;
     font-size: 1rem;
   }
+}
+
+.sectiontitulogaleria {
+  padding-top: 100px;
+  height: 100vh;
+  background-image: url(../img/Fondo_galeria.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+@media (min-width: 480px) {
+  .sectiontitulogaleria {
+    height: 130vh;
+  }
+}
+.sectiontitulogaleria__img {
+  opacity: 0.4;
+}
+@media (min-width: 768px) {
+  .sectiontitulogaleria__img {
+    height: 90%;
+  }
+}
+.sectiontitulogaleria__img img {
+  width: 100%;
+  height: 90%;
+}
+.sectiontitulogaleria__h1 {
+  font-family: "Sedgwick Ave", cursive;
+  color: rgba(194, 79, 44, 0.9);
+  padding: 7px;
+  background-image: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.7), rgb(233, 231, 234));
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  justify-self: center;
+  align-self: center;
+  padding: 10px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .sectiontitulogaleria__h1 {
+    font-size: 35px;
+  }
+}
+
+.sectiongaleria {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  height: 900px;
+  border-top: 3px solid rgb(236, 253, 176);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .sectiongaleria {
+    height: 120vh;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiongaleria {
+    height: 130vh;
+  }
+}
+@media (min-width: 1300px) {
+  .sectiongaleria {
+    height: 150vh;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiongaleria .carousel {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiongaleria .carousel-inner {
+    height: 90%;
+  }
+}
+.sectiongaleria .carousel .sectiongaleria__imagenes__div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media (min-width: 768px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div {
+    height: 100%;
+  }
+}
+.sectiongaleria .carousel .sectiongaleria__imagenes__div__item {
+  height: 200px;
+  width: 300px;
+  border: 3px solid rgb(236, 253, 176);
+}
+@media (min-width: 768px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div__item:hover {
+    transform: scale(1.4);
+    transition-duration: 1s;
+    transition-property: transform;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div__item:hover {
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 768px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div__item {
+    width: 40%;
+    height: 200px;
+    margin: 5px;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div__item {
+    height: 250px;
+    width: 450px;
+    margin: 5px;
+  }
+}
+@media (min-width: 1300px) {
+  .sectiongaleria .carousel .sectiongaleria__imagenes__div__item {
+    height: 350px;
+    width: 550px;
+    margin: 10px;
+  }
+}
+.sectiongaleria .carousel-item.active {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */

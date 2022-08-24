@@ -1,0 +1,129 @@
+.sectiontitulogaleria{
+    padding-top: 100px;
+    height: 100vh;
+    background-image: url(../img/Fondo_galeria.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    @include phonelg {
+        height: 130vh;
+    }
+    &__img{
+        opacity: 0.4;
+        @include tabletsm{
+            height: 90%;
+        }
+        img{
+            width: 100%;
+            height: 90%;
+        }
+    }
+    &__h1{
+        font-family: 'Sedgwick Ave', cursive;
+        color: $colorh1;
+        padding: 7px;
+        background-image: $background-header;
+        border-radius: 20px;
+        font-size: 30px;
+        font-weight: 700;
+        justify-self: center;
+        align-self: center;
+        padding: 10px;
+        text-align:center;
+        @include tabletsm{
+            font-size: 35px;
+        }
+    }
+}
+.sectiongaleria{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    height: 900px;
+    border-top: 3px solid $color-bordes-galeria;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include tabletsm {
+        height: 120vh;
+    }
+    @include tabletlg{
+        height: 130vh;
+    }
+    @include laptop{
+        height: 150vh;
+    }
+    .carousel{
+        @include tabletlg{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-inner{
+            @include tabletlg{
+                height:90%;
+            }
+        }
+        .sectiongaleria__imagenes__div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            @include tabletsm {
+                justify-content: center;
+            }
+            @include tabletlg {
+                height: 100%;
+            }
+            &__item{
+                height: 200px;
+                width: 300px;
+                border: 3px solid $color-bordes-galeria;
+                &:hover{
+                    @include tabletsm {            
+                        transform: scale(1.4);
+                        transition-duration: 1s;
+                        transition-property: transform;
+                    }
+                    @include tabletlg {
+                        transform: scale(1.2);
+                    }
+                }
+                @include tabletsm {
+                    width: 40%;
+                    height: 200px;
+                    margin: 5px;
+                }
+                @include tabletlg {
+                    height: 250px;
+                    width: 450px;
+                    margin: 5px;
+                }
+                @include laptop{
+                    height: 350px;
+                    width: 550px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .carousel-item.active{
+    display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

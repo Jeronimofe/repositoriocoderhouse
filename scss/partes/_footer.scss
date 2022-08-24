@@ -10,7 +10,7 @@ footer{
         align-self: flex-start;
         padding: 10px;
         margin: 5px;
-        .redesociales__list{
+        &__list{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -27,18 +27,7 @@ footer{
         width: 100%;
         padding: 10px;
         margin: 5px;
-        .derechos__año{
-            margin-left: 120px;
-        }
-        .derechos__patente{
-            margin-top: 10px;
-        }
-    }
-}
-
-@media (min-width: 480px) {
-    footer{
-        .derechos{
+        @include phonelg {
             display: grid;
             grid-template-areas: 
             ". patente patente ."
@@ -47,12 +36,18 @@ footer{
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 0.5fr 1fr;
             padding-bottom: 0px;
-            .derechos__año{
+        }
+        &__año{
+            margin-left: 120px;
+            @include phonelg {
                 grid-area: año;
                 margin: 0px;
                 text-align: center;
             }
-            .derechos__patente{
+        }
+        &__patente{
+            margin-top: 10px;
+            @include phonelg {
                 border-top: 1px solid black;
                 border-left: 1px solid black;
                 border-right: 1px solid black;
@@ -63,12 +58,13 @@ footer{
                 background-color: beige;
                 font-size: larger;
             }
-            .derechos__nombre{
+        }
+        &__nombre{
+            @include phonelg {
                 grid-area: nombre;
                 text-align: center;
             }
         }
     }
-
 }
 

@@ -4,10 +4,17 @@ header{
     justify-content: space-evenly;
     align-items: center;
     top: 0px;
-    background: conic-gradient(from 1.571rad at 100% 00%,rgba(217, 179, 132, 0.61),rgb(233, 231, 234));
+    background: $background-header;
     height: 70px;
     width: 100vw;
     z-index: 1000;
+    @include phonelg {
+        height: 80px;
+    }
+    @include tabletlg {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
     .logoHeader{
         width: 90px;
         height: 70px;
@@ -16,6 +23,12 @@ header{
         margin-top: 10px;
         margin-bottom: 10px;
         display: none;
+        @include tabletlg {
+            display: flex;
+            height: 80px;
+            margin: 0px;
+            justify-self: end;
+        }
         img{
             display: none;
             margin-left: 5%;
@@ -26,28 +39,63 @@ header{
             margin-bottom: 5%;
             object-fit: contain;
             opacity: 0.6;
+            @include phonelg {
+                display: inline-block;
+            }
         }
     }
 
     nav{
         height: 90px;
         width: 100vw;
+        @include phonelg {
+            height: 80px;
+        }
+        @include tabletlg{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
         .navbar{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
             width: 100%;
+            @include phonelg {
+                height: 80px;
+            }
+            @include tabletlg{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 50%;
+            }
             &__list{
                 display: flex;
                 width: 100vw;
                 align-items: center;
                 justify-content: space-evenly;
                 padding-left: 0px;
+                @include tabletlg {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-around;
+                }
                 &__item{
                     text-align: center;
                     padding: 1px;
                     width: 20%;
+                    @include phonelg {
+                        width: auto;
+                    }
+                    @include tabletlg {
+                        text-align: center;
+                        padding: 3px;
+                    }
                     &__link{
                         text-decoration: none;
                         color: darkslategray;
@@ -55,73 +103,14 @@ header{
                         font-size: 0.7rem;
                         height: 100%;
                         width: 100%;
-                    }
-                }
-            }
-
-        }
-    }
-}
-
-@media (min-width: 480px) {
-
-    header{
-        height: 80px;
-        nav{
-            height: 80px;
-            .navbar{
-                height: 80px;
-                &__list__item{
-                    width: auto;
-                }
-            }
-        }
-        .logoHeader img{
-            display: inline-block;
-        }
-    }
-}
-
-@media (min-width:768px) {
-
-    .navbar__list__item__link{
-        font-size: 1rem !important;
-    }
-}
-
-@media (min-width:1024px) {
-
-    header{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        .logoHeader{
-            display: flex;
-            height: 80px;
-            margin: 0px;
-            justify-self: end;
-        }
-        nav{
-            height: 80px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            .navbar{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                width: 50%;
-                &__list{
-                    display: flex;
-                    width: 100%;
-                    align-items: center;
-                    justify-content: space-around;
-                    &__item{
-                        text-align: center;
-                        padding: 3px;
-                        &__link{
+                        @include tabletsm {
+                            font-size: 1rem
+                        };
+                        @include tabletlg {
                             font-size: 1rem;
-                            &:hover{
+                        }
+                        &:hover{
+                            @include tabletlg{
                                 transition-duration: 0.3s;
                                 transition-property: color;
                                 color: rgb(217, 179, 132);
@@ -130,21 +119,7 @@ header{
                     }
                 }
             }
+
         }
     }
-
-
-    
-
-    
-
-    
-    
-    
-
-    
-    
-
-
-
 }

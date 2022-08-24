@@ -1,22 +1,23 @@
-@import "./abstracts/_variables";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/mediaqueries";
+
+@import "./base/resets";
+@import "./base/tipografia";
 
 
-@import "./base/_resets";
-@import "./base/_tipografia";
 
-
-
-@import "./partes/_footer";
+@import "./partes/footer";
 @import "./partes/header";
 
 
-@import "./componentes/_carousel";
+@import "./componentes/carousel";
 
 
-@import "./paginas/_contacto";
-@import "./paginas/_custom_art";
-@import "./paginas/_sobre_nosotros";
-@import "./paginas/_galeria";
-@import "./paginas/_index";
+@import "./paginas/contacto";
+@import "./paginas/custom_art";
+@import "./paginas/sobre_nosotros";
+@import "./paginas/galeria";
+@import "./paginas/index";
 
 
