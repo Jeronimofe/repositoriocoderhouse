@@ -1,17 +1,14 @@
 @import "./abstracts/variables";
-@import "./abstracts/mixins";
 @import "./abstracts/mediaqueries";
+
 
 @import "./base/resets";
 @import "./base/tipografia";
-
+@import "./abstracts/extends";
 
 
 @import "./partes/footer";
 @import "./partes/header";
-
-
-@import "./componentes/carousel";
 
 
 @import "./paginas/contacto";

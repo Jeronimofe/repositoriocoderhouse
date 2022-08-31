@@ -99,7 +99,7 @@ header{
                     &__link{
                         text-decoration: none;
                         color: darkslategray;
-                        font-family: 'Edu NSW ACT Foundation', cursive;
+                        font-family: map-get($tipografias, "nav-bar");
                         font-size: 0.7rem;
                         height: 100%;
                         width: 100%;

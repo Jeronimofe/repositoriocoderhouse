@@ -19,24 +19,17 @@
         }
     }
     &__h1{
-        font-family: 'Sedgwick Ave', cursive;
-        color: $colorh1;
-        padding: 7px;
+        @extend %title;
         background-image: $background-header;
         border-radius: 20px;
-        font-size: 30px;
         font-weight: 700;
-        justify-self: center;
-        align-self: center;
-        padding: 10px;
-        text-align:center;
         @include tabletsm{
             font-size: 35px;
         }
     }
 }
 .sectiongaleria{
-    background-color: aqua;
+    background-image: url(../img/fondofotosgaleria.jpg);
     display: flex;
     align-items: center;
     height: 900px;
@@ -69,6 +62,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-evenly;
+            background-color: rgba(0, 0, 0, 0.3);
             @include tabletsm {
                 justify-content: center;
             }
