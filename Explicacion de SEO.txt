@@ -1,4 +1,0 @@
-Puse palabras clave en los titulos como por ejemplo Arte, pintura, cuadros, personalizados, hiper-realista.
-Añadi un meta description a cada pagina
-Las imagenes fueron redimensionadas y comprimidas para que tengan un peso coherente
-los titles fueron cambiados para que no sea solo "Document"

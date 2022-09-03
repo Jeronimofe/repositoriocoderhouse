@@ -1,0 +1,55 @@
+.mainequipo{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    .tituloequipo{
+        @extend %title;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        font-weight: 700;
+        background-image: $background-titulos;
+        @include tabletlg {
+            padding: 10px;
+            font-size: 2rem;
+        }
+    }
+    .sectionequipo{
+        padding-bottom: 50px;
+        padding-top: 50px;
+        @include tabletlg {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        &__divtexto{
+            text-align: center;
+            &__titulo{
+                @include phonelg {
+                    font-size: 1rem;
+                }
+            }
+            &__texto{
+                @include phonelg {
+                    align-self: center;
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__imagen{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+
+
+
+
+

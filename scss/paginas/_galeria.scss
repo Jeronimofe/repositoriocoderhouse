@@ -20,7 +20,7 @@
     }
     &__h1{
         @extend %title;
-        background-image: $background-header;
+        background-image: $background-titulos;
         border-radius: 20px;
         font-weight: 700;
         @include tabletsm{

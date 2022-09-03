@@ -1,0 +1,93 @@
+
+.main__customart{
+    background-image: url(../img/Fondocustomart.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    .titulo__customart{
+        @extend %title;
+        margin-top: 100px;
+        background-image: $background-titulos;
+        border-radius: 20px;
+        font-weight: 700;
+        @include tabletlg{
+            font-size: 35px;
+        }
+    }
+    .carouselclasepropia{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-image: $color-background-customart;
+        @include phonelg {
+            display: block;
+            padding: 30px;
+        }
+        @include tabletlg{
+            height: 100vh;
+        }
+        .carousel{
+            width: 100%;
+            height: 100%;
+            &-inner{
+                width: 100%;
+                height: 100%;
+                .carousel-item{
+                    width: 100%;
+                    height: 100%;
+                    .imagen-carousel{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        @include tabletlg{
+                            width: 80%;
+                            margin-left: 10%;
+                        }
+                    }
+                    .carousel-caption{
+                        font-weight: 650;
+                        background-color: rgba(104, 73, 27, 0.6);
+                        border-radius: 60px;
+                        color: rgb(217, 179, 132);
+                    }
+                }
+            }
+        }
+    }
+    .customart__textoinferior{
+        height: 50vh;
+        padding: 5px;
+        font-size: 0.8rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: $color-background-customart;
+        font-family: map-get($tipografias, "texto" );
+        font-weight: 600;
+        @include phonelg{ 
+            height: 50vh;
+        }
+        @include tabletsm{
+            height: 30vh;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
