@@ -37,8 +37,8 @@
 }
 
 footer {
-  border-top: 3px solid rgb(6, 22, 3);
-  background-color: rgb(11, 41, 11);
+  border-top: 2px solid black;
+  background-color: rgba(104, 73, 27, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,8 +47,13 @@ footer {
 }
 footer .redesociales {
   align-self: flex-start;
-  padding: 10px;
   margin: 5px;
+  font-size: 0.8rem;
+}
+@media (min-width: 480px) {
+  footer .redesociales {
+    font-size: 1rem;
+  }
 }
 footer .redesociales__list {
   display: flex;
@@ -56,6 +61,30 @@ footer .redesociales__list {
   justify-content: space-evenly;
   align-items: flex-start;
   list-style: none;
+  font-family: "Poppins";
+}
+footer .redesociales__list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+footer .redesociales__list li a {
+  text-decoration: none;
+  color: black;
+}
+footer .redesociales__list li a :hover {
+  color: rgba(194, 79, 44, 0.9);
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+footer .redesociales__list li a i {
+  text-align: center;
+  padding-right: 5px;
+}
+footer .redesociales__list li a p {
+  margin: 0px;
+  padding-top: 5px;
 }
 footer .derechos {
   display: flex;
@@ -78,6 +107,7 @@ footer .derechos {
 }
 footer .derechos__año {
   margin-left: 120px;
+  font-family: "Poppins";
 }
 @media (min-width: 480px) {
   footer .derechos__año {
@@ -88,6 +118,13 @@ footer .derechos__año {
 }
 footer .derechos__patente {
   margin-top: 10px;
+  font-size: 0.6rem;
+}
+footer .derechos__patente p {
+  margin: 0px;
+  font-family: "Sedgwick Ave";
+  font-weight: 600;
+  letter-spacing: 0.05rem;
 }
 @media (min-width: 480px) {
   footer .derechos__patente {
@@ -98,9 +135,12 @@ footer .derechos__patente {
     border-radius: 15px;
     grid-area: patente;
     text-align: center;
-    background-color: beige;
+    background-color: rgba(104, 73, 27, 0.7);
     font-size: larger;
   }
+}
+footer .derechos__nombre {
+  font-family: "Poppins";
 }
 @media (min-width: 480px) {
   footer .derechos__nombre {
@@ -475,7 +515,7 @@ header nav .navbar__list__item__link {
 }
 .main__customart .titulo__customart {
   margin-top: 100px;
-  background-image: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.7), rgb(233, 231, 234));
+  background-image: conic-gradient(from 1.571rad at 100% 0%, rgb(217, 179, 132), rgb(233, 231, 234));
   border-radius: 20px;
   font-weight: 700;
 }
@@ -526,7 +566,7 @@ header nav .navbar__list__item__link {
 }
 .main__customart .carouselclasepropia .carousel-inner .carousel-item .carousel-caption {
   font-weight: 650;
-  background-color: rgba(104, 73, 27, 0.6);
+  background-color: rgba(104, 73, 27, 0.7);
   border-radius: 60px;
   color: rgb(217, 179, 132);
 }
@@ -568,7 +608,7 @@ header nav .navbar__list__item__link {
   margin-bottom: 20px;
   border-radius: 20px;
   font-weight: 700;
-  background-image: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.7), rgb(233, 231, 234));
+  background-image: conic-gradient(from 1.571rad at 100% 0%, rgb(217, 179, 132), rgb(233, 231, 234));
 }
 @media (min-width: 1024px) {
   .mainequipo .tituloequipo {
@@ -634,7 +674,7 @@ header nav .navbar__list__item__link {
   height: 90%;
 }
 .sectiontitulogaleria__h1 {
-  background-image: conic-gradient(from 1.571rad at 100% 0%, rgba(217, 179, 132, 0.7), rgb(233, 231, 234));
+  background-image: conic-gradient(from 1.571rad at 100% 0%, rgb(217, 179, 132), rgb(233, 231, 234));
   border-radius: 20px;
   font-weight: 700;
 }
@@ -817,6 +857,7 @@ header nav .navbar__list__item__link {
 .seccionsegunda {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: fit-content;
   background-image: url(../img/fondo_index_segundaseccion.jpg);
@@ -835,6 +876,13 @@ header nav .navbar__list__item__link {
   height: 80%;
   margin: 15px;
 }
+@media (min-width: 768px) {
+  .seccionsegunda__contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .seccionsegunda__contenedor__carrousel {
   display: inline-block;
   width: 100%;
@@ -845,15 +893,7 @@ header nav .navbar__list__item__link {
 @media (min-width: 768px) {
   .seccionsegunda__contenedor__carrousel {
     width: 40%;
-    height: 85%;
-    padding: 1%;
-    padding-top: 1%;
-  }
-}
-@media (min-width: 1024px) {
-  .seccionsegunda__contenedor__carrousel {
-    width: 40%;
-    height: 85%;
+    height: 90%;
     padding: 1%;
     padding-top: 1%;
   }
@@ -862,56 +902,76 @@ header nav .navbar__list__item__link {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  vertical-align: baseline;
 }
 .seccionsegunda__contenedor__textoImagen {
   display: inline-block;
   width: 100%;
   margin-top: 20px;
   padding: 5px;
-  /* texto continuo a la imagen */
+  font-family: "Poppins";
 }
 @media (min-width: 768px) {
   .seccionsegunda__contenedor__textoImagen {
     display: inline-block;
     width: 50%;
+    align-self: flex-start;
   }
 }
-@media (min-width: 1024px) {
-  .seccionsegunda__contenedor__textoImagen {
-    display: inline-block;
-    width: 50%;
+.seccionsegunda__contenedor__textoImagen h2 {
+  font-family: "Poppins";
+  font-size: 1rem;
+  text-align: center;
+  background-image: conic-gradient(from 1.571rad at 100% 0%, rgb(217, 179, 132), rgb(233, 231, 234));
+  border: solid 1px black;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .seccionsegunda__contenedor__textoImagen h2 {
+    font-size: 1.3rem;
   }
 }
 .seccionsegunda__contenedor__textoImagen p {
-  display: inline;
+  font-weight: 600;
+  width: 100%;
   font-size: 0.8rem;
+  padding-top: 50px;
 }
 @media (min-width: 768px) {
   .seccionsegunda__contenedor__textoImagen p {
     font-size: 1rem;
   }
 }
-@media (min-width: 1024px) {
-  .seccionsegunda__contenedor__textoImagen p {
-    display: inline;
-    font-size: 1rem;
-  }
-}
-.seccionsegunda__contenedor__textoinferior {
+.seccionsegunda__textoinferior {
+  text-align: center;
   padding-bottom: 15px;
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 20px;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+}
+.seccionsegunda__textoinferior p {
+  background-color: rgba(194, 79, 44, 0.9);
+  font-weight: 500;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-family: "Poppins";
 }
 @media (min-width: 768px) {
-  .seccionsegunda__contenedor__textoinferior {
-    font-size: 1rem;
+  .seccionsegunda__textoinferior p {
+    border: 4px solid black;
+    border-radius: 20;
   }
 }
-@media (min-width: 1024px) {
-  .seccionsegunda__contenedor__textoinferior {
-    font-size: 1rem;
+@media (min-width: 480px) {
+  .seccionsegunda__textoinferior {
+    font-size: 0.6;
+  }
+}
+@media (min-width: 768px) {
+  .seccionsegunda__textoinferior {
+    font-size: 0.8rem;
   }
 }
 

@@ -60,6 +60,7 @@
 .seccionsegunda{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: fit-content;
     background-image: url(../img/fondo_index_segundaseccion.jpg);
@@ -74,6 +75,11 @@
         width: 95%;
         height: 80%;
         margin: 15px;
+        @include tabletsm{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
         &__carrousel{
             display: inline-block;
             width: 100%;                 
@@ -82,13 +88,7 @@
             padding-top: 5%;
             @include tabletsm {
                 width: 40%;                 
-                height: 85%;
-                padding: 1%;
-                padding-top: 1%;
-            }
-            @include tabletlg {
-                width: 40%;                 
-                height: 85%;
+                height: 90%;
                 padding: 1%;
                 padding-top: 1%;
             }
@@ -96,6 +96,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                vertical-align: baseline;
             }
         }
         &__textoImagen{
@@ -103,38 +104,61 @@
             width: 100%;
             margin-top: 20px;
             padding: 5px;
+            font-family: map-get($tipografias, "texto" );
             @include tabletsm {
                 display: inline-block;
-                width: 50%; 
+                width: 50%;
+                align-self: flex-start; 
             }
-            @include tabletlg {
-                display: inline-block;
-                width: 50%; 
-            }                           /* texto continuo a la imagen */
-            p{
-                display: inline;
-                font-size: 0.8rem;
-                @include tabletsm {
-                    font-size: 1rem;
+            h2{
+                font-family: map-get($tipografias, "texto" );
+                font-size: 1rem;
+                text-align: center;
+                background-image: $background-titulos;
+                border: solid 1px black;
+                border-radius: 5px;
+                margin-top: 20px;
+                @include tabletsm{
+                    font-size: 1.3rem;
                 }
-                @include tabletlg {
-                    display: inline;
+            }                         
+            p{
+                font-weight: 600;
+                width: 100%;
+                font-size: 0.8rem;
+                padding-top: 50px;
+                @include tabletsm {
                     font-size: 1rem;
                 }
             }
         }
-        &__textoinferior{
-            padding-bottom: 15px;
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-top: 20px;
+    }
+    &__textoinferior{
+        text-align: center;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 20px;
+        font-size: 0.5rem;
+        p{
+            background-color: $colorh1;
+            font-weight: 500;
+            border: 2px solid black;
+            border-radius: 15px;
+            font-family: map-get($tipografias, "texto" );
+            @include tabletsm{
+                border: 4px solid black;
+                border-radius: 20;
+            }
+        }
+        @include phonelg {
+            font-size: 0.6;
+        }
+        @include tabletsm {
             font-size: 0.8rem;
-            @include tabletsm {
-                font-size: 1rem;
-            }
-            @include tabletlg {
-                font-size: 1rem;
-            }
+        }
+        @include tabletlg {
+            
         }
     }
 }

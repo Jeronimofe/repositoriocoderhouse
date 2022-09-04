@@ -1,6 +1,6 @@
 footer{
-    border-top: 3px solid rgb(6, 22, 3);
-    background-color: rgb(11, 41, 11);
+    border-top: 2px solid black;
+    background-color: rgba(104, 73, 27, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,14 +8,41 @@ footer{
     align-content: space-around;
     .redesociales{
         align-self: flex-start;
-        padding: 10px;
         margin: 5px;
+        font-size: 0.8rem;
+        @include phonelg {
+            font-size: 1rem;
+        }
         &__list{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: flex-start;
             list-style: none;
+            font-family: map-get($tipografias, "texto" );
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    :hover{
+                        color: $colorh1;
+                        transition-property: color;
+                        transition-duration: 0.3s;
+                    }
+                    i{
+                        text-align: center;
+                        padding-right: 5px;
+                    }
+                    p{
+                        margin: 0px;
+                        padding-top: 5px;
+                    }
+                }
+            }
         }
     }
     .derechos{
@@ -39,6 +66,7 @@ footer{
         }
         &__año{
             margin-left: 120px;
+            font-family: map-get($tipografias, "texto" );
             @include phonelg {
                 grid-area: año;
                 margin: 0px;
@@ -47,6 +75,13 @@ footer{
         }
         &__patente{
             margin-top: 10px;
+            font-size: 0.6rem;
+            p{
+                margin: 0px;
+                font-family: map-get($tipografias, "titulos" );
+                font-weight: 600;
+                letter-spacing: 0.05rem;
+            }
             @include phonelg {
                 border-top: 1px solid black;
                 border-left: 1px solid black;
@@ -55,11 +90,12 @@ footer{
                 border-radius: 15px;
                 grid-area: patente;
                 text-align: center;
-                background-color: beige;
+                background-color: $color-carteles;
                 font-size: larger;
             }
         }
         &__nombre{
+            font-family: map-get($tipografias, "texto");
             @include phonelg {
                 grid-area: nombre;
                 text-align: center;
