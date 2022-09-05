@@ -6,10 +6,16 @@
     background-position: bottom;
     background-attachment: fixed;
     @include phonelg {
-        height: 130vh;
+        height: 90vh;
+    }
+    @include tabletlg {
+        height: 110vh;
     }
     &__img{
         opacity: 0.4;
+        @include phonelg{
+            height: 80%;
+        }
         @include tabletsm{
             height: 90%;
         }

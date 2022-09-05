@@ -598,11 +598,13 @@ header nav .navbar__list__item__link {
 }
 
 .mainequipo {
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
+  background-image: url(../../img/fondo-equipo.jpg);
+  background-size: cover;
 }
 .mainequipo .tituloequipo {
   margin-bottom: 20px;
@@ -619,6 +621,9 @@ header nav .navbar__list__item__link {
 .mainequipo .sectionequipo {
   padding-bottom: 50px;
   padding-top: 50px;
+  background-color: rgba(233, 231, 234, 0.85);
+  border: 2px black solid;
+  border-radius: 10px;
 }
 @media (min-width: 1024px) {
   .mainequipo .sectionequipo {
@@ -630,10 +635,16 @@ header nav .navbar__list__item__link {
 .mainequipo .sectionequipo__divtexto {
   text-align: center;
 }
+.mainequipo .sectionequipo__divtexto__titulo {
+  font-family: "Poppins";
+}
 @media (min-width: 480px) {
   .mainequipo .sectionequipo__divtexto__titulo {
     font-size: 1rem;
   }
+}
+.mainequipo .sectionequipo__divtexto__texto {
+  font-family: "Poppins";
 }
 @media (min-width: 480px) {
   .mainequipo .sectionequipo__divtexto__texto {
@@ -641,10 +652,13 @@ header nav .navbar__list__item__link {
     font-size: 1rem;
   }
 }
-.mainequipo .sectionequipo__imagen img {
+.mainequipo .sectionequipo__carousel {
+  height: 400px;
+}
+.mainequipo .sectionequipo__carousel .carousel-inner .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   padding: 5px;
 }
 
@@ -658,11 +672,21 @@ header nav .navbar__list__item__link {
 }
 @media (min-width: 480px) {
   .sectiontitulogaleria {
-    height: 130vh;
+    height: 90vh;
+  }
+}
+@media (min-width: 1024px) {
+  .sectiontitulogaleria {
+    height: 110vh;
   }
 }
 .sectiontitulogaleria__img {
   opacity: 0.4;
+}
+@media (min-width: 480px) {
+  .sectiontitulogaleria__img {
+    height: 80%;
+  }
 }
 @media (min-width: 768px) {
   .sectiontitulogaleria__img {
