@@ -40,6 +40,16 @@
             }
             &__texto{
                 font-family: map-get($tipografias, "texto" );
+                    a{
+                        text-decoration: none;
+                        color: $colorh1;
+                        &:hover{
+                            color: $color-submit-btn-hover;
+                            transition-property: color;
+                            transition-duration: 0.3s;
+                        }
+                    }
+                    
                 @include phonelg {
                     align-self: center;
                     font-size: 1rem;

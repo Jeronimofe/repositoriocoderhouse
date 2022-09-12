@@ -648,6 +648,15 @@ header nav .navbar__list__item__link {
 .mainequipo .sectionequipo__divtexto__texto {
   font-family: "Poppins";
 }
+.mainequipo .sectionequipo__divtexto__texto a {
+  text-decoration: none;
+  color: rgba(194, 79, 44, 0.9);
+}
+.mainequipo .sectionequipo__divtexto__texto a:hover {
+  color: rgb(209, 122, 212);
+  transition-property: color;
+  transition-duration: 0.3s;
+}
 @media (min-width: 480px) {
   .mainequipo .sectionequipo__divtexto__texto {
     align-self: center;
